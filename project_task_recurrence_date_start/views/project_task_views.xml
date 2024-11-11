@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="project_task_view_form" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='recurring_task']" position="after">
+                <group>
+                    <field name="allow_repeat_start"
+                        attrs="{'invisible' :  [('recurring_task', '=', False)]}"/>
+                    <field name="repeat_start"
+                        attrs="{'invisible' :  ['|', ('recurring_task', '=', False),
+                        ('allow_repeat_start', '=', False)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
