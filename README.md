@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [project_parent_task_filter](project_parent_task_filter/) | 16.0.1.1.0 |  | Add a filter to show the parent tasks
 [project_pivot](project_pivot/) | 16.0.1.0.1 |  | Pivot view for projects
 [project_purchase_link](project_purchase_link/) | 16.0.1.0.0 |  | Project Purchase Link
+[project_risk](project_risk/) | 16.0.1.0.0 |  | MOR risk management method
 [project_role](project_role/) | 16.0.1.0.4 | [![alexey-pelykh](https://github.com/alexey-pelykh.png?size=30px)](https://github.com/alexey-pelykh) | Project role-based roster
 [project_scrum](project_scrum/) | 16.0.1.0.0 | [![adasatorres](https://github.com/adasatorres.png?size=30px)](https://github.com/adasatorres) | This addon allow use the scrum methodology in projects
 [project_sequence](project_sequence/) | 16.0.1.0.1 | [![yajo](https://github.com/yajo.png?size=30px)](https://github.com/yajo) [![anddago78](https://github.com/anddago78.png?size=30px)](https://github.com/anddago78) | Add a sequence field to projects, filled automatically

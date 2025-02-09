@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo-addon-project_parent_task_filter>=16.0dev,<16.1dev',
         'odoo-addon-project_pivot>=16.0dev,<16.1dev',
         'odoo-addon-project_purchase_link>=16.0dev,<16.1dev',
+        'odoo-addon-project_risk>=16.0dev,<16.1dev',
         'odoo-addon-project_role>=16.0dev,<16.1dev',
         'odoo-addon-project_scrum>=16.0dev,<16.1dev',
         'odoo-addon-project_sequence>=16.0dev,<16.1dev',
