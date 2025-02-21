@@ -16,7 +16,13 @@
         <field name="inherit_id" ref="project.view_task_tree2" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='project_id']" position="after">
-                <field name="sprint_id" />
+                <field
+                    name="sprint_id"
+                    domain="
+                ['|', ('project_id', '=', False),
+                ('project_id', '=', project_id),
+                ('state', '!=', 'done')]"
+                />
             </xpath>
         </field>
     </record>
@@ -52,8 +58,6 @@
                 <attribute name="event_open_popup">False</attribute>
                 <attribute name="dependency_arrows">False</attribute>
             </xpath>
-
         </field>
     </record>
-
 </odoo>

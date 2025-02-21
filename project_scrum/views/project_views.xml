@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+    <record id="project_project_action_sprints" model="ir.actions.act_window">
+        <field name="name">Sprints</field>
+        <field name="res_model">project.sprint</field>
+        <field name="view_mode">tree,form,timeline</field>
+        <field name="domain">[('project_id', '=', active_id)]</field>
+        <field name="context">{'default_project_id': active_id}</field>
+    </record>
+    <record id="project_project_action_backlog" model="ir.actions.act_window">
+        <field name="name">Sprints</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+        ('project_id', '=', active_id),
+        ('sprint_id','=', False)
+        ('state', '!=', 'done')
+        ]</field>
+        <field name="context">{'default_project_id': active_id}</field>
+    </record>
+    <record id="project_project_action_sprint_timeline" model="ir.actions.act_window">
+        <field name="name">Sprint Timeline</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('project_id', '=', active_id)]</field>
+        <field name="context">{'default_project_id': active_id}</field>
+    </record>
     <record id="project_project_view_form_inherit" model="ir.ui.view">
         <field name="name">project.project.view.form.inherit</field>
         <field name="model">project.project</field>
@@ -8,8 +33,8 @@
             <xpath expr="//div[@name='button_box']" position="inside">
                 <button
                     class="oe_stat_button"
-                    name="action_sprints"
-                    type="object"
+                    name="%(project_project_action_sprints)d"
+                    type="action"
                     groups="project.group_project_manager"
                     icon="fa-hourglass"
                 >
@@ -24,8 +49,8 @@
                 </button>
                 <button
                     class="oe_stat_button"
-                    name="action_backlog"
-                    type="object"
+                    name="%(project_project_action_backlog)d"
+                    type="action"
                     groups="project.group_project_manager"
                     icon="fa-archive"
                 >
@@ -59,7 +84,7 @@
                 position="inside"
             >
                 <div role="menuitem" groups="project.group_project_manager">
-                    <a name="action_sprint_timeline" type="object">Sprints Timeline</a>
+                    <a name="%(project_project_action_sprint_timeline)d" type="action">Sprints Timeline</a>
                 </div>
             </xpath>
         </field>

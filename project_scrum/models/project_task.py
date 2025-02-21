@@ -9,7 +9,6 @@ class ProjectTask(models.Model):
         comodel_name="project.sprint",
         string="Sprint",
         tracking=True,
-        domain="['|', ('project_id', '=', False), ('project_id', '=', project_id)]",
     )
 
     sprint_state = fields.Selection(
