@@ -1,0 +1,1 @@
+This add-on adds the ability for variants to have their own project templates.
